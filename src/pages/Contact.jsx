@@ -1,5 +1,8 @@
+import Header from "../components/Header";
+
 function Contact() {
-    return ( <>Contact Page</> );
+    return ( <>
+        <Header/>Contact Page</> );
 }
 
 export default Contact;

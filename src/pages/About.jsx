@@ -1,5 +1,9 @@
+import Header from "../components/Header";
+
 function About() {
-    return ( <>About Page</> );
+    return ( <>
+    <Header/>
+    About Page</> );
 }
 
 export default About;

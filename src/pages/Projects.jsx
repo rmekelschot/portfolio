@@ -1,5 +1,8 @@
+import Header from "../components/Header";
+
 function Projects() {
-    return ( <>Projects Page</> );
+    return ( <>
+        <Header/>Projects Page</> );
 }
 
 export default Projects;

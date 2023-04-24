@@ -1,20 +1,11 @@
-import { Link } from "react-router-dom";
+import * as React from "react";
+import Header from "../components/Header";
 
 function Home() {
   return (
     <div>
+      <Header/>
       Home Page
-      <ul>
-        <li>
-          <Link to="./About">About</Link>
-        </li>
-        <li>
-          <Link to="./projects">Projects</Link>
-        </li>
-        <li>
-          <Link to="./contact">Contact</Link>
-        </li>
-      </ul>
     </div>
   );
 }
