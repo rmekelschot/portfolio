@@ -15,3 +15,7 @@ code {
 .text-white {
   color: #fff;
 }
+
+.text-dark {
+  color: #000;
+}
