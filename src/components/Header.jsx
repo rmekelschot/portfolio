@@ -29,7 +29,7 @@ function Header() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" color="default">
         <Box sx={{ display: { xs: "flex", md: "none" } }}>
           <Toolbar>
             <IconButton
@@ -100,29 +100,17 @@ function Header() {
             {route}
           </Typography>
           <Box>
-            <Link to="/" className="text text-white">
-                <Button variant="condensed ">
-
-              Home
-                </Button>
+            <Link to="/" className="text text-dark">
+              <Button variant="condensed ">Home</Button>
             </Link>
-            <Link to="/about" className="text text-white">
-                <Button variant="condensed ">
-
-              About
-                </Button>
+            <Link to="/about" className="text text-dark">
+              <Button variant="condensed ">About</Button>
             </Link>
-            <Link to="/projects" className="text text-white">
-                <Button variant="condensed ">
-
-              Projects
-                </Button>
+            <Link to="/projects" className="text text-dark">
+              <Button variant="condensed ">Projects</Button>
             </Link>
-            <Link to="/contact" className="text text-white">
-                <Button variant="condensed ">
-
-              Contact
-                </Button>
+            <Link to="/contact" className="text text-dark">
+              <Button variant="condensed ">Contact</Button>
             </Link>
           </Box>
         </Toolbar>
