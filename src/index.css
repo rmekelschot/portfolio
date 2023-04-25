@@ -12,10 +12,23 @@ code {
     monospace;
 }
 
+.text {
+  text-decoration: none;
+}
+
 .text-white {
   color: #fff;
 }
 
+.text-light {
+  color: #4d4d4d;
+}
+
 .text-dark {
   color: #000;
+}
+
+.icon {
+  font-size: 24px;
+  padding: 5px;
 }

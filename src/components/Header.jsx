@@ -3,7 +3,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useLocation } from "react-router-dom";
@@ -63,24 +62,24 @@ function Header() {
             }}
           >
             <MenuItem onClick={handleClose}>
-              <Link to="/" className="text-dark">
-                <Button color="inherit">Home</Button>
+              <Link to="/" className="text text-dark">
+                Home
               </Link>
             </MenuItem>
             <MenuItem onClick={handleClose}>
-              <Link to="/about" className="text-dark">
-                <Button color="inherit">About</Button>
+              <Link to="/about" className="text text-dark">
+                About
               </Link>
             </MenuItem>
             <MenuItem onClick={handleClose}>
-              <Link to="/projects" className="text-dark">
-                <Button color="inherit">Projects</Button>
+              <Link to="/projects" className="text text-dark">
+                Projects
               </Link>
             </MenuItem>
             <MenuItem onClick={handleClose}>
-          <Link to="/contact" className="text-dark">
-            <Button color="inherit">Contact</Button>
-          </Link>
+              <Link to="/contact" className="text text-dark">
+                Contact
+              </Link>
             </MenuItem>
           </Menu>
         </Toolbar>
