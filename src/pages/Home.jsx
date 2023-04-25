@@ -2,7 +2,7 @@ import * as React from "react";
 import Header from "../components/Header";
 import { Box, Container, Typography } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBootstrap, faCss3, faDocker, faGit, faGitAlt, faGithub, faHtml5, faJava, faJs, faLinkedin, faLinux, faNode, faPhp, faPython, faReact, faUnity, faVuejs } from "@fortawesome/free-brands-svg-icons";
+import { faBootstrap, faCss3, faDocker, faGit, faGithub, faHtml5, faJava, faJs, faLinkedin, faLinux, faNode, faPhp, faPython, faReact, faUnity, faVuejs } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 
 function Home() {
