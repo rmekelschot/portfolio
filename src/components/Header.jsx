@@ -9,6 +9,7 @@ import { Link, useLocation } from "react-router-dom";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
+import { Button } from "@mui/material";
 
 function Header() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -29,21 +30,68 @@ function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-            id="menu-toggle"
-            aria-controls={open ? "menu" : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? "true" : undefined}
-            onClick={handleClick}
-          >
-            <MenuIcon />
-          </IconButton>
+        <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          <Toolbar>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+              id="menu-toggle"
+              aria-controls={open ? "menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              onClick={handleClick}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1, textTransform: "capitalize" }}
+            >
+              {route}
+            </Typography>
+
+            <Menu
+              id="menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                "aria-labelledby": "menu-toggle",
+              }}
+            >
+              <MenuItem onClick={handleClose}>
+                <Link to="/" className="text text-dark">
+                  Home
+                </Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <Link to="/about" className="text text-dark">
+                  About
+                </Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <Link to="/projects" className="text text-dark">
+                  Projects
+                </Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <Link to="/contact" className="text text-dark">
+                  Contact
+                </Link>
+              </MenuItem>
+            </Menu>
+          </Toolbar>
+        </Box>
+        <Toolbar
+          sx={{
+            display: { xs: "none", md: "flex" },
+            justifyContent: "space-between",
+          }}
+        >
           <Typography
             variant="h6"
             component="div"
@@ -51,37 +99,32 @@ function Header() {
           >
             {route}
           </Typography>
+          <Box>
+            <Link to="/" className="text text-white">
+                <Button variant="condensed ">
 
-          <Menu
-            id="menu"
-            anchorEl={anchorEl}
-            open={open}
-            onClose={handleClose}
-            MenuListProps={{
-              "aria-labelledby": "menu-toggle",
-            }}
-          >
-            <MenuItem onClick={handleClose}>
-              <Link to="/" className="text text-dark">
-                Home
-              </Link>
-            </MenuItem>
-            <MenuItem onClick={handleClose}>
-              <Link to="/about" className="text text-dark">
-                About
-              </Link>
-            </MenuItem>
-            <MenuItem onClick={handleClose}>
-              <Link to="/projects" className="text text-dark">
-                Projects
-              </Link>
-            </MenuItem>
-            <MenuItem onClick={handleClose}>
-              <Link to="/contact" className="text text-dark">
-                Contact
-              </Link>
-            </MenuItem>
-          </Menu>
+              Home
+                </Button>
+            </Link>
+            <Link to="/about" className="text text-white">
+                <Button variant="condensed ">
+
+              About
+                </Button>
+            </Link>
+            <Link to="/projects" className="text text-white">
+                <Button variant="condensed ">
+
+              Projects
+                </Button>
+            </Link>
+            <Link to="/contact" className="text text-white">
+                <Button variant="condensed ">
+
+              Contact
+                </Button>
+            </Link>
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>

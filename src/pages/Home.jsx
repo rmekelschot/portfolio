@@ -28,16 +28,20 @@ function Home() {
       <Header />
       <Container
         sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: '90vh'
+          display:{xs: 'block', sm: 'flex'},
+          alignItems: 'center',
+          height: '75vh'
         }}
       >
-        <Grid container spacing={2}>
-          <Grid item sm={12} md={8}>
-            <Typography variant={'h4'} gutterBottom sx={{ typography: { lg: 'h1' }}} style={{fontWeight: "bold"}}>
-              Front-end developer 👋
+        <Grid container spacing={2} sx={{ marginTop: { xs: "30px", md: '10vh' } }}>
+          <Grid item xs={12} sm={6}>
+            <Typography
+              variant={"h5"}
+              gutterBottom
+              sx={{ typography: { lg: "h1"} }}
+              style={{ fontWeight: "bold" }}
+            >
+              Front-End Developer 👋
             </Typography>
             <Typography variant="subtitle1" className="text-light">
               Hoi, ik ben Mitchell Ekelschot.
@@ -60,21 +64,19 @@ function Home() {
               <FontAwesomeIcon className="icon" icon={faGithub} />
             </Link>
           </Grid>
-          <Grid item sm={12} md={4}>
-            <Box sx={{display: 'flex', justifyContent: 'center'}}>
+          <Grid item xs={12} sm={6} sx={{width: '100%'}}>
+            <Box sx={{ display: "flex", justifyContent: "center", width: 'inherit'}}>
               <Box
                 sx={{
-                  width: "250px",
-                  height: "250px",
+                  width: "200px",
+                  height: "200px",
                   backgroundColor: "#000",
                 }}
-              >
-                Image
-              </Box>
+              ></Box>
             </Box>
           </Grid>
-          <Grid item sm={12}>
-            <Typography variant="h6" gutterBottom sx={{marginTop: '20px'}}>
+          <Grid item xs={12}>
+            <Typography variant="h6" gutterBottom sx={{ marginTop: "20px" }}>
               Vaardigheden:
             </Typography>
             <Box
