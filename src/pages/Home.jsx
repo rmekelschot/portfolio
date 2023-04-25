@@ -31,11 +31,12 @@ function Home() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          height: '90vh'
         }}
       >
         <Grid container spacing={2}>
-          <Grid item xs={12} md={4}>
-            <Typography variant="h4" gutterBottom sx={{ fontWeight: "bold" }}>
+          <Grid item xs={12} md={8}>
+            <Typography variant={'h4'} gutterBottom sx={{ typography: { md: 'h1' }}} style={{fontWeight: "bold"}}>
               Front-end developer 👋
             </Typography>
             <Typography variant="subtitle1" className="text-light">
@@ -59,7 +60,7 @@ function Home() {
               <FontAwesomeIcon className="icon" icon={faGithub} />
             </Link>
           </Grid>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={4}>
             <Box sx={{display: 'flex', justifyContent: 'center'}}>
               <Box
                 sx={{
@@ -73,8 +74,8 @@ function Home() {
             </Box>
           </Grid>
           <Grid item xs={12}>
-            <Typography variant="h6" gutterBottom>
-              Vaardigheden:{" "}
+            <Typography variant="h6" gutterBottom sx={{marginTop: '20px'}}>
+              Vaardigheden:
             </Typography>
             <Box
               sx={{
