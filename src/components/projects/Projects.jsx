@@ -4,7 +4,6 @@ import "./projects.css";
 const Projects = () => {
   const data = [
     {
-      id: 1,
       image: "",
       title: "Fitness Website",
       repo: "https://github.com/rmekelschot/fitness-website",
@@ -17,9 +16,9 @@ const Projects = () => {
       <h5>My Recent Work</h5>
       <h2>Projects</h2>
       <div className="container project__container">
-        {data.map((data) => {
+        {data.map((data, i) => {
           return (
-            <article className="project__item" key={data.id}>
+            <article className="project__item" key={i}>
               <div className="project__item-image">
                 <img src={data.image} alt={data.title} />
               </div>
