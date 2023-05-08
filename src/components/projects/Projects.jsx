@@ -1,10 +1,12 @@
 import React from "react";
 import "./projects.css";
 
+import imgfitter from '../../assets/project-fitter.png'
+
 const Projects = () => {
   const data = [
     {
-      image: "",
+      image: imgfitter,
       title: "Fitness Website",
       repo: "https://github.com/rmekelschot/fitness-website",
       demo: "https://rmekelschot.github.io/fitness-website",
